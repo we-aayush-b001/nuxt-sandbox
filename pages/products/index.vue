@@ -1,7 +1,8 @@
 <template>
     <div>
         <div>
-            <div v-for="product in products" :id="product.id">
+            <div v-for="product in products" :id="product.id" :key="product.id">  
+              <!-- key attribute must not use index values -->
              <NuxtLink :to="`/products/${product.id}`">{{ product.title }}</NuxtLink>
             </div>
         </div>
